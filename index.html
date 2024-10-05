@@ -25,83 +25,8 @@
             </ul>
         </nav>
     </div>
-
-    <!-- Slide Show -->
-<div class="container">
-    <div class="slideshow-container">
-        <div class="slides">
-            <img src="../an/images/20240922-Selena_Andrew_Baby_Shower-A-00008.jpg" alt="Slide 1">
-        </div>
-        <div class="slides">
-            <img src="../an/images/20240922-Selena_Andrew_Baby_Shower-A-00011.jpg" alt="Slide 2">
-        </div>
-        <div class="slides">
-            <img src="../an/images/20240922-Selena_Andrew_Baby_Shower-A-00014.jpg" alt="Slide 3">
-        </div>
-
-        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-        <a class="next" onclick="changeSlide(1)">&#10095;</a>
-    </div>
-
-    <div class="dot-container">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
-
-    <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-
-        function changeSlide(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            let slides = document.getElementsByClassName("slides");
-            let dots = document.getElementsByClassName("dot");
-
-            if (n > slides.length) {
-                slideIndex = 1;
-            }
-            if (n < 1) {
-                slideIndex = slides.length;
-            }
-
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-
-            for (let i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-        }
-    </script>
-   <!-- Submit Photo button -->     
-    <div class="content1">
-        <section class="contact" id="Photo Submissions">
-            <div class="container">
-                <h2></h2>
-                <p></p>
-                <a href="https://forms.gle/hYe5PkWcnFnx6aSz6" class="btn">Submit Photos</a>
-            </div>
-        </section>
-    </div>    
-        <footer>
-            <div class="container">
-                <p>&copy; Est. 2024 by Selena & Andrew. All rights reserved.</p>
-            </div>
-        </footer>
-    </div>
-
-    <!-- Edits "Portfolio" Section-->
+ 
+<!-- Edits "Portfolio" Section-->
     <div class="content">
         <section class="portfolio" id="Our Family">
             <div class="container">
@@ -110,12 +35,12 @@
                 <div class="portfolio-items">
                     <!--Pic1 -->
                     <div class="portfolio-item">
-                       <img src="" alt="Portfolio 1">
+                       <img src="../an/images/20240922-Selena_Andrew_Baby_Shower-A-00008.jpg" alt="Portfolio 1">
                         <h3></h3>
                     </div>
                     <!--Pic2 -->
                     <div class="portfolio-item">
-                        <img src="" alt="Portfolio 2">
+                        <img src="../an/images/20240922-Selena_Andrew_Baby_Shower-A-00011.jpg" alt="Portfolio 2">
                         <h3></h3>
                     </div>
                     <!-- Pic3 -->
@@ -144,7 +69,23 @@
                 </div>
             </div>
         </section>
+
+
+<!-- Edits the body Area -->
+    <div class="content1">
+        <section class="contact" id="Photo Submissions">
+            <div class="container">
+                <h2></h2>
+                <p></p>
+                <a href="https://forms.gle/hYe5PkWcnFnx6aSz6" class="btn">Submit Photos</a>
+            </div>
+        </section>
+    </div>    
+        <footer>
+            <div class="container">
+                <p>&copy; Est. 2024 by Selena & Andrew. All rights reserved.</p>
+            </div>
+        </footer>
     </div>
-</div>      
 </body>
 </html>
