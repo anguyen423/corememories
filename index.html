@@ -88,4 +88,64 @@
         </footer>
     </div>
 </body>
+<body>
+
+    <div class="slideshow-container">
+        <div class="slides">
+            <img src="https://via.placeholder.com/800x400/ff7f7f/333333?text=Slide+1" alt="Slide 1">
+        </div>
+        <div class="slides">
+            <img src="https://via.placeholder.com/800x400/77aaff/333333?text=Slide+2" alt="Slide 2">
+        </div>
+        <div class="slides">
+            <img src="https://via.placeholder.com/800x400/ffd700/333333?text=Slide+3" alt="Slide 3">
+        </div>
+
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function changeSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("slides");
+            let dots = document.getElementsByClassName("dot");
+
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+</body>
 </html>
